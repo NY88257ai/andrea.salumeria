@@ -229,40 +229,64 @@ header {
 }
 
 /* --------------------------------------------------
-   ACCORDION MENU
+   ACCORDION MENU — RUSTIC STYLE
 -------------------------------------------------- */
 .accordion {
   margin-top: 2rem;
+  background: #fdf8f3;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .accordion-item {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 6px;
   overflow: hidden;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #fffdf8;
+  border: 1px solid #d6c7b0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
 }
 
 .accordion-header {
   width: 100%;
   text-align: left;
-  padding: 1rem;
-  background: #f5f5f5;
-  border: none;
-  font-size: 1.1rem;
+  padding: 1rem 1.25rem;
+  background: #b22222;
+  color: #fff;
+  font-size: 1.15rem;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
+  border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: #8b1a1a;
 }
 
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
   transition: max-height 0.3s ease;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 .accordion-content.open {
-  padding: 1rem;
+  padding: 1rem 1.25rem;
+}
+
+.accordion-content ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.accordion-content li {
+  margin-bottom: 0.75rem;
 }
 
 /* --------------------------------------------------
