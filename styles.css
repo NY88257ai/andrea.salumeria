@@ -109,12 +109,21 @@ header {
 }
 
 /* --------------------------------------------------
-   RUSTIC HERO SECTION
+   HERO SECTION (CLEAN + FIXED)
 -------------------------------------------------- */
 
-.hero { min-height: 450px; max-height: 550px; overflow: hidden; position: relative; z-index: 1; } .accordion { position: relative; z-index: 2; }
+.hero {
+  min-height: 450px;
+  max-height: 550px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.6s ease-in-out;
+}
 
-/* Soft rustic vignette */
+/* Soft vignette */
 .hero::after {
   content: "";
   position: absolute;
@@ -123,13 +132,7 @@ header {
   pointer-events: none;
 }
 
-.hero-title,
-.hero-eyebrow,
-.hero-subtitle {
-  font-family: "Lato", sans-serif;
-  color: #333;
-}
-
+/* Center + pad hero content */
 .hero-inner {
   max-width: 650px;
   margin: 0 auto;
@@ -138,18 +141,18 @@ header {
   z-index: 2;
 }
 
-/* Eyebrow text */
+/* Eyebrow */
 .hero-eyebrow {
   font-size: 0.95rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 0.85;
   color: #5a4634;
 }
 
-/* Main title */
+/* Title */
 .hero-title {
-  font-size: 3.2rem;
+  font-size: 3rem;
   margin: 1rem 0;
   line-height: 1.2;
   color: #3b2f2f;
@@ -160,31 +163,29 @@ header {
   max-width: 550px;
   opacity: 0.9;
   margin-bottom: 1.5rem;
-  font-family: "Lato", sans-serif;
   color: #4a3b2e;
 }
 
 /* Pills */
+.pill-group {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .pill {
   display: inline-block;
   padding: 0.35rem 0.85rem;
   background: #f3e9d7;
   border-radius: 20px;
   font-size: 0.85rem;
-  margin-right: 0.5rem;
   color: #4a3b2e;
 }
 
 .pill--primary {
   background: #8b1a1a;
   color: #fff;
-}
-
-.pill-group {
-  margin-bottom: 1rem;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
 }
 
 /* Buttons */
@@ -224,19 +225,25 @@ header {
   color: #fff;
 }
 
+/* Fade animation */
+.fade-in {
+  animation: fadeHero 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeHero {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
 /* --------------------------------------------------
-   ACCORDION MENU — RUSTIC ITALIAN DELI STYLE
+   ACCORDION MENU — CLEAN BEIGE
 -------------------------------------------------- */
 .accordion {
   margin-top: 2rem;
-  background: #fdf8f3;
+  background: #fdf8f3; /* clean beige */
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  background-image: url('photos/textures/parchment.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .accordion-item {
@@ -276,7 +283,6 @@ header {
   line-height: 1.6;
   color: #333;
   background: #fffef9;
-  font-family: "Lato", sans-serif;
 }
 
 .accordion-content.open {
@@ -376,12 +382,7 @@ footer {
 -------------------------------------------------- */
 @media (max-width: 900px) {
   .hero-inner {
-    flex-direction: column;
-  }
-
-  .hero-visual-wrapper {
-    width: 100%;
-    height: 300px;
+    padding: 0 1.5rem;
   }
 
   .nav-toggle {
@@ -405,45 +406,3 @@ footer {
     display: flex;
   }
 }
-
-/* Smooth rustic fade */
-.hero {
-  transition: background-image 0.6s ease-in-out;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-/* Fade-in class */
-.fade-in {
-  animation: fadeHero 1.2s ease-in-out forwards;
-}
-
-@keyframes fadeHero {
-  from { opacity: 0.2; }
-  to { opacity: 1; }
-}
-
-/* Optional rustic vignette overlay */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
-  pointer-events: none;
-}
-
-.hero {
-  position: relative;
-  z-index: 1;
-}
-
-.accordion,
-.menu-section,
-#menu,
-section {
-  position: relative;
-  z-index: 5;
-}
-
-
