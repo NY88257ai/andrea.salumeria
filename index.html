@@ -1,1 +1,222 @@
-place holder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Andrea Salumeria | Fine Italian Deli & Grocery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <meta name="description" content="Andrea Salumeria — Fine Italian Deli & Grocery serving Jersey City since 1975. Homemade mozzarella, famous sandwiches, imported cheeses, breads, and authentic Italian specialties.">
+
+  <!-- Social Sharing -->
+  <meta property="og:title" content="Andrea Salumeria">
+  <meta property="og:description" content="Fine Italian Deli & Grocery serving Jersey City since 1975.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="photos/gallery/footerhero1.jpg">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container nav-bar">
+    <div class="logo-block">
+      <img src="photos/logo/footer-logo-imp-dom-specialties.png" class="site-logo" alt="Andrea Salumeria Logo">
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">Our Story</a>
+      <a href="#visit">Visit</a>
+      <button class="nav-cta" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+        Order a Sandwich
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-eyebrow">Since 1975 • Jersey City</div>
+        <h1 class="hero-title">
+          Old‑world Italian deli <span>made fresh</span> every day.
+        </h1>
+        <p class="hero-subtitle">
+          Welcome to Andrea Salumeria — a family‑owned Italian deli and grocery known for homemade mozzarella,
+          famous sandwiches, imported cheeses, and nearly fifty years of neighborhood hospitality.
+        </p>
+
+        <div class="hero-meta">
+          <div class="pill pill--primary">Fine Italian Deli & Grocery</div>
+          <div class="pill">Homemade Mozzarella Daily</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+            View Menu
+          </button>
+          <button class="btn btn-ghost" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            Our Story
+          </button>
+        </div>
+
+        <!-- QR Code near order button -->
+        <div class="qr-wrapper">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https://ny88257ai.github.io/andrea.salumeria-/" alt="QR Code to Menu" class="qr-code">
+          <p class="qr-label">Scan for Menu</p>
+        </div>
+
+      </div>
+
+      <!-- HERO IMAGE ROTATOR -->
+      <div class="hero-visual-wrapper">
+        <div class="hero-visual" id="hero-visual"></div>
+        <div class="hero-visual-overlay"></div>
+        <div class="hero-visual-label">From our counter, every day.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU WITH ACCORDIONS -->
+  <section id="menu">
+    <div class="container">
+      <h2>Our Menu</h2>
+      <p class="section-intro">Tap to expand each category.</p>
+
+      <!-- QR Code in menu section -->
+      <div class="qr-center">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://ny88257ai.github.io/andrea.salumeria-/" class="qr-code">
+        <p class="qr-label">Scan for Full Menu</p>
+      </div>
+
+      <!-- ACCORDION START -->
+      <div class="accordion">
+
+        <!-- Sandwiches -->
+        <div class="accordion-item">
+          <button class="accordion-header">Sandwich Menu</button>
+          <div class="accordion-content">
+            <p>All your classic favorites, made fresh daily.</p>
+            <!-- You can paste your sandwich list here -->
+          </div>
+        </div>
+
+        <!-- Imported Cheeses -->
+        <div class="accordion-item">
+          <button class="accordion-header">Imported Cheeses</button>
+          <div class="accordion-content">
+            <p>Authentic Italian cheeses, sliced or whole.</p>
+          </div>
+        </div>
+
+        <!-- Breads -->
+        <div class="accordion-item">
+          <button class="accordion-header">Breads</button>
+          <div class="accordion-content">
+            <p>Fresh Italian breads delivered daily.</p>
+          </div>
+        </div>
+
+        <!-- Deli Meats -->
+        <div class="accordion-item">
+          <button class="accordion-header">Deli Meats</button>
+          <div class="accordion-content">
+            <p>Premium meats sliced to order.</p>
+          </div>
+        </div>
+
+        <!-- Salads & Soups -->
+        <div class="accordion-item">
+          <button class="accordion-header">Salads & Soups</button>
+          <div class="accordion-content">
+            <p>Fresh salads and homemade soups.</p>
+          </div>
+        </div>
+
+        <!-- Grocery Items -->
+        <div class="accordion-item">
+          <button class="accordion-header">Grocery Items</button>
+          <div class="accordion-content">
+            <p>Imported Italian pantry staples.</p>
+          </div>
+        </div>
+
+        <!-- Catering Trays -->
+        <div class="accordion-item">
+          <button class="accordion-header">Catering Trays</button>
+          <div class="accordion-content">
+            <p>Perfect for parties, holidays, and events.</p>
+          </div>
+        </div>
+
+        <!-- Apparel Placeholder -->
+        <div class="accordion-item">
+          <button class="accordion-header">Coming Soon: Andrea’s Apparel</button>
+          <div class="accordion-content">
+            <p>Show your love for Andrea’s Salumeria with exclusive merch — shirts, hats, hoodies, and more.</p>
+            <p>We’re designing a line of apparel inspired by our 50-year heritage. Stay tuned for launch details and pre-order information.</p>
+          </div>
+        </div>
+
+      </div>
+      <!-- ACCORDION END -->
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <p class="section-intro">A look inside Andrea Salumeria.</p>
+
+      <div id="gallery-grid">
+        <div class="gallery-item"><img src="photos/gallery/footerhero1.jpg" class="gallery-photo"></div>
+        <div class="gallery-item"><img src="photos/gallery/footerhero2.jpg" class="gallery-photo"></div>
+        <div class="gallery-item"><img src="photos/gallery/homemadepestopasta.jpg" class="gallery-photo"></div>
+        <div class="gallery-item"><img src="photos/gallery/saladtray1.jpg" class="gallery-photo"></div>
+        <div class="gallery-item"><img src="photos/gallery/tray1.jpg" class="gallery-photo"></div>
+        <div class="gallery-item"><img src="photos/gallery/tray2.jpg" class="gallery-photo"></div>
+        <div class="gallery-item"><img src="photos/gallery/tray3.jpg" class="gallery-photo"></div>
+        <div class="gallery-item"><img src="photos/gallery/tray4.jpg" class="gallery-photo"></div>
+        <div class="gallery-item"><img src="photos/gallery/tray5.jpg" class="gallery-photo"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-meta">
+      <span>Andrea Salumeria — Fine Italian Deli & Grocery</span>
+      <span>Jersey City, NJ</span>
+    </div>
+
+    <!-- Footer QR Code -->
+    <div class="qr-footer">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://ny88257ai.github.io/andrea.salumeria-/" class="qr-code">
+      <p class="qr-label">Scan Menu</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
