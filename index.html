@@ -1,341 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Andrea Salumeria | Fine Italian Deli & Grocery</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO -->
-  <meta name="description" content="Andrea Salumeria — Fine Italian Deli & Grocery serving Jersey City since 1975. Homemade mozzarella, famous sandwiches, imported cheeses, breads, and authentic Italian specialties.">
-
-  <!-- Social Sharing -->
-  <meta property="og:title" content="Andrea Salumeria">
-  <meta property="og:description" content="Fine Italian Deli & Grocery serving Jersey City since 1975.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="photos/logo/new-rustic-logo.png">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <!-- Icons (for social media) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrea Salumeria – Fine Italian Deli & Grocery</title>
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 
 <body>
 
-<header>
-  <div class="container nav-bar">
-    <div class="logo-block">
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-bar">
       <img src="photos/logo/new-rustic-logo.png" class="site-logo" alt="Andrea Salumeria Logo">
-    </div>
 
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">Our Story</a>
-      <a href="#visit">Visit</a>
-      <button class="nav-cta" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
-        Order a Sandwich
+      <button class="nav-toggle" id="nav-toggle">
+        <span></span><span></span><span></span>
       </button>
-    </nav>
-  </div>
-</header>
 
-<main>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#story">Our Story</a>
+        <a href="#visit">Visit</a>
+        <button class="nav-cta">Order a Sandwich</button>
+      </nav>
+    </div>
+  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">SINCE 1975 • JERSEY CITY</div>
-    <h1 class="hero-title">Old-world Italian deli, fresh every day.</h1>
-    <p class="hero-subtitle">
-      Welcome to Andrea Salumeria, a family-owned Italian deli and grocery known for homemade mozzarella, Italian sandwiches, imported goods, and nearly fifty years of neighborhood hospitality.
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">SINCE 1975 • JERSEY CITY</div>
+
+      <h1 class="hero-title">Old-world Italian deli, fresh every day.</h1>
+
+      <p class="hero-subtitle">
+        Welcome to Andrea Salumeria, a family-owned Italian deli and grocery known for homemade mozzarella, Italian sandwiches, imported goods, and nearly fifty years of neighborhood hospitality.
+      </p>
+
+      <div class="pill-group">
+        <span class="pill pill--primary">Fine Italian Deli & Grocery</span>
+        <span class="pill">Homemade Mozzarella Daily</span>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="document.querySelector('#menu').scrollIntoView({behavior:'smooth'})">View Menu</button>
+        <button class="btn btn-ghost" onclick="document.querySelector('#story').scrollIntoView({behavior:'smooth'})">Our Story</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="container">
+    <h2>Our Menu</h2>
+    <p class="section-intro">Classic Italian sandwiches, homemade mozzarella, imported specialties, and more.</p>
+
+    <div class="accordion">
+
+      <div class="accordion-item">
+        <button class="accordion-header">Sandwiches</button>
+        <div class="accordion-content">
+          <ul>
+            <li>Italian Combo</li>
+            <li>Fresh Mozzarella & Tomato</li>
+            <li>Prosciutto di Parma</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">Homemade Specialties</button>
+        <div class="accordion-content">
+          <ul>
+            <li>Fresh Mozzarella</li>
+            <li>Prepared Foods</li>
+            <li>Fresh Pasta</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="container">
+    <h2>Gallery</h2>
+    <p class="section-intro">A look at our sandwiches, trays, and homemade specialties.</p>
+
+    <div class="gallery-carousel">
+      <div class="gallery-track">
+        <div class="gallery-slide"><img src="photos/gallery/tray1.jpg"></div>
+        <div class="gallery-slide"><img src="photos/gallery/tray2.jpg"></div>
+        <div class="gallery-slide"><img src="photos/gallery/tray3.jpg"></div>
+        <div class="gallery-slide"><img src="photos/gallery/tray4.jpg"></div>
+        <div class="gallery-slide"><img src="photos/gallery/tray5.jpg"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="story" class="container">
+    <h2>Our Story</h2>
+    <p class="section-intro">
+      Nearly fifty years of tradition, family, and authentic Italian flavors.
     </p>
-
-    <div class="pill-group">
-      <span class="pill pill--primary">Fine Italian Deli & Grocery</span>
-      <span class="pill">Homemade Mozzarella Daily</span>
-    </div>
-
-    <div class="hero-actions">
-      <button class="btn btn-primary">View Menu</button>
-      <button class="btn btn-ghost">Our Story</button>
-    </div>
-  </div>
-</section>
-
-  <!-- OUR STORY / ABOUT -->
-  <section id="about">
-    <div class="container">
-      <h2>Our Story</h2>
-      <p class="section-intro">
-        Andrea Salumeria has been serving the Jersey City community since 1975. What started as a small neighborhood
-        salumeria has grown into a destination for homemade mozzarella, classic Italian sandwiches, imported cheeses,
-        cured meats, and pantry staples from the old country.
-      </p>
-      <p>
-        Nearly fifty years later, the traditions remain the same: quality ingredients, generous portions, and warm,
-        familiar faces behind the counter. Whether you’re grabbing a hero for lunch, ordering trays for a family party,
-        or stocking your kitchen with real Italian products, we’re proud to be part of your table.
-      </p>
-    </div>
   </section>
 
-  <!-- MENU WITH ACCORDIONS -->
-  <section id="menu">
-    <div class="container">
-      <h2>Our Menu</h2>
-      <p class="section-intro">Tap or click a category below to explore what we make fresh for you every day.</p>
+  <!-- VISIT -->
+  <section id="visit" class="container">
+    <h2>Visit Us</h2>
+    <p class="section-intro">247 Central Ave, Jersey City, NJ 07307</p>
 
-      <div class="accordion">
-
-        <!-- Sandwiches -->
-        <div class="accordion-item">
-          <button class="accordion-header">Sandwich Menu</button>
-          <div class="accordion-content">
-            <p>Classic Italian heroes made on fresh bread with premium meats, cheeses, and house‑made toppings.</p>
-            <ul>
-              <li><strong>Andrea Special:</strong> Prosciutto, fresh mozzarella, roasted peppers, olive oil.</li>
-              <li><strong>Italian Combo:</strong> Ham, salami, provolone, lettuce, tomato, oil & vinegar.</li>
-              <li><strong>Fresh Mozzarella Hero:</strong> House‑made mozzarella, tomato, basil, balsamic.</li>
-              <li><strong>Chicken Cutlet:</strong> Breaded cutlet, fresh mozz, broccoli rabe or roasted peppers.</li>
-            </ul>
-          </div>
-        </div>
-
-  <!-- Imported Cheeses -->
- <div class="accordion-item">
-  <button class="accordion-header">Imported Cheeses</button>
-  <div class="accordion-content">
-    <p>Hand‑selected Italian and international cheeses, sliced to order or sold by the piece.</p>
-
-    <ul>
-      <li><strong>Parmigiano Reggiano:</strong> The king of cheeses — aged, nutty, and perfect for grating or snacking.</li>
-      <li><strong>Auricchio Sharp Provolone:</strong> Bold, tangy, and aged to perfection. A classic Italian staple.</li>
-      <li><strong>Moliterno al Tartufo (Black Truffle):</strong> Rich sheep’s milk cheese infused with earthy black truffles.</li>
-      <li><strong>Imported Gorgonzola:</strong> Creamy blue cheese with a sharp, tangy finish.</li>
-      <li><strong>Italian Fontina:</strong> Semi‑soft, buttery, and perfect for melting.</li>
-      <li><strong>Fiore di Sardegna (Sheep’s Milk):</strong> A robust, aged cheese from Sardinia with a deep, savory flavor.</li>
-      <li><strong>Rocinante (Aged Goat Cheese):</strong> Spanish goat cheese with a firm texture and nutty profile.</li>
-      <li><strong>Ricotta Salata:</strong> Dry, crumbly ricotta — ideal for grating over pasta or salads.</li>
-      <li><strong>Manchego (12 Month):</strong> Spanish sheep’s milk cheese with a firm bite and sweet finish.</li>
-      <li><strong>Smoked Gouda:</strong> Creamy Dutch cheese with a smoky aroma and smooth texture.</li>
-      <li><strong>Greek Feta:</strong> Brined and crumbly, perfect for Mediterranean dishes.</li>
-      <li><strong>Genuine Pecorino Romano (Black Label):</strong> Sharp, salty, and aged — a true Roman classic.</li>
-      <li><strong>Brie with Black Truffles (Perigord Region):</strong> French delicacy with earthy truffle notes and creamy texture.</li>
-      <li><strong>Fresh Homemade Mozzarella & Bocconcini:</strong> Made daily in‑house — soft, milky, and irresistible.</li>
-      <li><strong>Homemade Scamorza:</strong> Mild and semi‑soft, perfect for slicing or melting.</li>
-      <li><strong>Smoked Scamorza:</strong> A smoky twist on the classic, with rich flavor.</li>
-      <li><strong>Burrata:</strong> Cream‑filled mozzarella pouch — decadent and fresh.</li>
-    </ul>
-  </div>
-</div>
-
-        <!-- Breads -->
-<div class="accordion-item">
-  <button class="accordion-header">Breads</button>
-  <div class="accordion-content">
-    <p>Fresh breads delivered daily from trusted local bakeries — perfect for sandwiches, catering, or your table at home.</p>
-
-    <ul>
-      <li><strong>Italian Loaves:</strong> Classic crusty Italian bread, perfect for heroes or slicing.</li>
-      <li><strong>Panella:</strong> Soft, airy Sicilian-style round bread — great for sandwiches or table bread.</li>
-      <li><strong>Football Rolls:</strong> Ideal for hearty sandwiches with plenty of fillings.</li>
-      <li><strong>Dinner Rolls:</strong> Soft, fresh rolls — perfect for meals, parties, or catering trays.</li>
-      <li><strong>Focaccia (Small & Large):</strong> Fresh, fluffy focaccia baked with authentic Italian flavor.</li>
-    </ul>
-  </div>
-</div>
-
-        <!-- Deli Meats -->
-        <div class="accordion-item">
-          <button class="accordion-header">Deli Meats</button>
-          <div class="accordion-content">
-            <p>Premium cold cuts and imported specialties sliced how you like them.</p>
-            <ul>
-              <li>Prosciutto di Parma</li>
-              <li>Mortadella</li>
-              <li>Genoa Salami</li>
-              <li>Capicola</li>
-              <li>Roast beef, turkey, ham, and more</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Salads & Soups -->
-        <div class="accordion-item">
-          <button class="accordion-header">Salads & Soups</button>
-          <div class="accordion-content">
-            <p>House‑made salads and comforting soups for a quick meal or catering.</p>
-            <ul>
-              <li>Fresh mozzarella & tomato salad</li>
-              <li>Pasta salads</li>
-              <li>Antipasto salad</li>
-              <li>Seasonal soups (call for today’s selection)</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Grocery Items -->
-        <div class="accordion-item">
-          <button class="accordion-header">Grocery Items</button>
-          <div class="accordion-content">
-            <p>Pantry staples and imported products to bring real Italian flavor home.</p>
-            <ul>
-              <li>Pasta, tomatoes, and olive oils</li>
-              <li>Vinegars and condiments</li>
-              <li>Jarred antipasto and peppers</li>
-              <li>Italian cookies and sweets</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Catering Trays -->
-        <div class="accordion-item">
-          <button class="accordion-header">Catering Trays</button>
-          <div class="accordion-content">
-            <p>Perfect for holidays, office events, and family gatherings. Call for pricing and custom orders.</p>
-            <ul>
-              <li>Italian hero platters</li>
-              <li>Antipasto and cheese boards</li>
-              <li>Pasta and hot entrées (select items)</li>
-              <li>Salad and side trays</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Apparel Placeholder -->
-        <div class="accordion-item">
-          <button class="accordion-header">Coming Soon: Andrea’s Apparel</button>
-          <div class="accordion-content">
-            <p>Show your love for Andrea’s Salumeria with exclusive merch — shirts, hats, hoodies, and more.</p>
-            <p>We’re designing a line of apparel inspired by our 50‑year heritage. Stay tuned for launch details and pre‑order information.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.123!2d-74.046!3d40.748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQ0JzUyLjgiTiA3NMKwMDInNDYuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+      width="100%" height="350" allowfullscreen="" loading="lazy">
+    </iframe>
   </section>
 
-  <!-- GALLERY AS HORIZONTAL CAROUSEL -->
-  <section id="gallery">
-    <div class="container">
-      <h2>Gallery</h2>
-      <p class="section-intro">A look inside Andrea Salumeria — trays, sandwiches, and the flavors we’re known for.</p>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner container">
+      <div class="footer-meta">
+        <div>
+          <h3>Andrea Salumeria</h3>
+          <p>Fine Italian Deli & Grocery</p>
+          <p>247 Central Ave<br>Jersey City, NJ 07307</p>
+          <p>(201) 653-1666</p>
+        </div>
 
-      <div class="gallery-carousel">
-        <div class="gallery-track">
-          <img src="photos/logo/new-rustic-logo-delimeats.png" alt="Andrea Salumeria Rustic Logo">
-          <div class="gallery-slide"><img src="photos/gallery/footerhero2.jpg" alt="Italian specialties"></div>
-          <div class="gallery-slide"><img src="photos/gallery/homemadepestopasta.jpg" alt="Homemade pesto pasta"></div>
-          <div class="gallery-slide"><img src="photos/gallery/saladtray1.jpg" alt="Salad tray"></div>
-          <div class="gallery-slide"><img src="photos/gallery/tray1.jpg" alt="Catering tray 1"></div>
-          <div class="gallery-slide"><img src="photos/gallery/tray2.jpg" alt="Catering tray 2"></div>
-          <div class="gallery-slide"><img src="photos/gallery/tray3.jpg" alt="Catering tray 3"></div>
-          <div class="gallery-slide"><img src="photos/gallery/tray4.jpg" alt="Catering tray 4"></div>
-          <div class="gallery-slide"><img src="photos/gallery/tray5.jpg" alt="Catering tray 5"></div>
+        <div>
+          <h3>Hours</h3>
+          <p>Mon–Fri: 8 AM – 6 PM</p>
+          <p>Saturday: 8 AM – 5 PM</p>
+          <p>Sunday: Closed</p>
         </div>
       </div>
-      <p class="section-intro" style="margin-top:0.75rem;font-size:0.85rem;">
-        Swipe on mobile or scroll horizontally to see more.
-      </p>
-    </div>
-  </section>
 
-  <!-- VISIT / MAP SECTION -->
-  <section id="visit">
-    <div class="container">
-      <h2>Find Us</h2>
-      <p class="section-intro">
-        Visit us in the heart of Jersey City’s Heights neighborhood. We’re easy to find and always happy to see you.
-      </p>
-    </div>
-
-    <!-- Full-width map -->
-    <div style="width:100%;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08);">
-      <iframe
-  width="100%"
-  height="350"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.628764820538!2d-74.0511387!3d40.7434396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2574048b7dc4d%3A0x61689fe0e35ef8a5!2sAndrea%20Salumeria!5e0!3m2!1sen!2sus!4v1700000000000">
-</iframe>
-    </div>
-
-    <div class="container" style="margin-top:1rem;">
-      <p><strong>Address:</strong> 247 Central Ave, Jersey City, NJ 07307</p>
-      <p>
-        <a href="https://www.google.com/maps/place/Andrea+Salumeria/@40.7434396,-74.0511387,17z/data=!4m15!1m8!3m7!1s0x89c2574048b7dc4d:0x61689fe0e35ef8a5!2sAndrea+Salumeria!8m2!3d40.743512!4d-74.051322!10e9!16s%2Fg%2F1tgf8prc!3m5!1s0x89c2574048b7dc4d:0x61689fe0e35ef8a5!8m2!3d40.743512!4d-74.051322!16s%2Fg%2F1tgf8prc"
-           target="_blank" rel="noopener">
-          Open in Google Maps
-        </a>
-      </p>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container footer-inner">
-    <div class="footer-meta">
-      <div>
-        <strong>Andrea Salumeria</strong><br>
-        Fine Italian Deli &amp; Grocery<br>
-        247 Central Ave<br>
-        Jersey City, NJ 07307<br>
-        (201) 653‑1666
-      </div>
-      <div>
-        <strong>Hours</strong><br>
-        Monday – Friday: 8:00 AM – 6:00 PM<br>
-        Saturday: 8:00 AM – 5:00 PM<br>
-        Sunday: Closed
+      <div class="footer-social">
+        <p>Follow Us</p>
+        <div class="social-icons">
+          <a href="#">FB</a>
+          <a href="#">IG</a>
+          <a href="#">Yelp</a>
+        </div>
       </div>
     </div>
+  </footer>
 
-    <div class="footer-social">
-      <span>Follow &amp; Find Us:</span>
-      <div class="social-icons">
-        <!-- Replace # with your real links when ready -->
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.yelp.com/" target="_blank" rel="noopener" aria-label="Yelp">
-          <i class="fab fa-yelp"></i>
-        </a>
-        <a href="https://www.google.com/maps/place/Andrea+Salumeria/@40.7434396,-74.0511387,17z" target="_blank" rel="noopener" aria-label="Google Maps">
-          <i class="fas fa-location-dot"></i>
-        </a>
-        <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </div>
-    </div>
-
-    <div style="margin-top:0.5rem;font-size:0.75rem;opacity:0.8;">
-      © 2025 Andrea Salumeria — Fine Italian Deli &amp; Grocery
-    </div>
-  </div>
-</footer>
-<script src="script.js?v=4"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
