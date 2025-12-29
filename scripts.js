@@ -42,7 +42,7 @@ setInterval(rotateHero, 6000);
 
 
 /* --------------------------------------------------
-   ACCORDION LOGIC (Closed by default)
+   ACCORDION LOGIC
 -------------------------------------------------- */
 const accordionHeaders = document.querySelectorAll(".accordion-header");
 
@@ -68,6 +68,19 @@ accordionHeaders.forEach(header => {
     }
   });
 });
+
+
+/* --------------------------------------------------
+   GALLERY HORIZONTAL SCROLL (Smooth)
+-------------------------------------------------- */
+const galleryTrack = document.querySelector(".gallery-track");
+
+if (galleryTrack) {
+  galleryTrack.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    galleryTrack.scrollLeft += e.deltaY;
+  });
+}
 
 
 /* --------------------------------------------------
