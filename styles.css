@@ -229,7 +229,7 @@ header {
 }
 
 /* --------------------------------------------------
-   ACCORDION MENU — RUSTIC STYLE
+   ACCORDION MENU — RUSTIC ITALIAN DELI STYLE
 -------------------------------------------------- */
 .accordion {
   margin-top: 2rem;
@@ -237,6 +237,10 @@ header {
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background-image: url('photos/textures/parchment.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .accordion-item {
@@ -252,7 +256,7 @@ header {
   width: 100%;
   text-align: left;
   padding: 1rem 1.25rem;
-  background: #b22222;
+  background: #8b1a1a;
   color: #fff;
   font-size: 1.15rem;
   font-family: "Playfair Display", serif;
@@ -260,10 +264,11 @@ header {
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .accordion-header:hover {
-  background: #8b1a1a;
+  background: #a52a2a;
 }
 
 .accordion-content {
@@ -274,6 +279,8 @@ header {
   font-size: 0.95rem;
   line-height: 1.6;
   color: #333;
+  background: #fffef9;
+  font-family: "Lato", sans-serif;
 }
 
 .accordion-content.open {
