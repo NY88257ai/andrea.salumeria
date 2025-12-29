@@ -121,6 +121,12 @@ header {
   font-family: "Playfair Display", serif;
 }
 
+.hero {
+  min-height: 450px;
+  max-height: 550px;
+  overflow: hidden;
+}
+
 /* Soft rustic vignette */
 .hero::after {
   content: "";
