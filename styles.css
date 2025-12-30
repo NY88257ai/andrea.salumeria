@@ -203,10 +203,33 @@ header {
     width: 100%;
     text-align: center;
     justify-content: center;
+    margin-top: 1rem;
+
+    /* ⭐ Optional polish goes here */
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    box-shadow: 0 4px 12px rgba(123,27,27,0.4);
   }
 
   .nav-toggle {
     display: block;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .nav-links {
+    align-items: center;
+    text-align: center;
   }
 }
 
