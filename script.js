@@ -1,3 +1,5 @@
+console.log("Gallery script is running");
+
 </main>
   
 <script>
