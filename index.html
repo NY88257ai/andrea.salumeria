@@ -1444,34 +1444,40 @@
   // 2) Add their filenames to this array
   // 3) The script will render them automatically
 
-  const galleryImages = [
-    "photos/gallery/footerhero1.jpg",
-  	"photos/gallery/footerhero2.jpg",
-  	"photos/gallery/homemadepestopasta.jpg",
-  	"photos/gallery/saladtray1.jpg",
-  	"photos/gallery/tray1.jpg",
-  	"photos/gallery/tray2.jpg",
-  	"photos/gallery/tray3.jpg",
-  	"photos/gallery/tray4.jpg",
-  	// Add more gallery images here, e.g.:
-	"photos/gallery/tray5.jpg"	
-  ];
+  const galleryTrack = document.getElementById("gallery-track");
 
-  const galleryGrid = document.getElementById('gallery-grid');
+if (galleryTrack && galleryImages.length > 0) {
+  galleryImages.forEach(src => {
+    const slide = document.createElement("div");
+    slide.className = "gallery-slide";
 
-  if (galleryGrid && galleryImages.length > 0) {
-    galleryImages.forEach(src => {
-      const item = document.createElement('figure');
-      item.className = 'gallery-item';
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = "";
-      img.className = 'gallery-photo';
-      item.appendChild(img);
-      galleryGrid.appendChild(item);
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "";
+    img.className = "gallery-photo";
+
+    slide.appendChild(img);
+    galleryTrack.appendChild(slide);
+  });
+
+  let scrollAmount = 0;
+  const slideWidth = 260 + 16; // slide width + gap
+
+  function autoScrollCarousel() {
+    scrollAmount += slideWidth;
+
+    if (scrollAmount >= galleryTrack.scrollWidth - galleryTrack.clientWidth) {
+      scrollAmount = 0;
+    }
+
+    galleryTrack.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth"
     });
   }
 
+  setInterval(autoScrollCarousel, 2500);
+}
   // ========= GOOGLE REVIEW BUTTON =========
   function openGoogleReview() {
     // For now, we’ll use the main Maps listing link.
