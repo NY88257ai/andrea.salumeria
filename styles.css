@@ -133,7 +133,7 @@ header {
 /* Fix for gallery grid items */
 .gallery-item {
   width: 100%;
-  height: 260px;
+  height: 180px;
   border-radius: 8px;
   overflow: hidden;
   background: #eee; /* fallback if image fails */
@@ -414,9 +414,36 @@ footer {
 }
 
 /* --------------------------------------------------
-   MOBILE RESPONSIVE
+   GALLERY — BASE (DESKTOP + TABLET)
 -------------------------------------------------- */
-@media (max-width: 900px) {
+#gallery-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 180px; /* default size for larger screens */
+  border-radius: 8px;
+  overflow: hidden;
+  background: #eee; /* fallback if image fails */
+}
+
+.gallery-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------
+   MOBILE RESPONSIVE (480px and below)
+-------------------------------------------------- */
+@media (max-width: 480px) {
+
+  /* Your existing mobile rules stay here unchanged */
   .hero-inner {
     padding: 0 1.5rem;
   }
@@ -440,5 +467,10 @@ footer {
 
   .nav-links.open {
     display: flex;
+  }
+
+  /* NEW: Mobile gallery tweak */
+  .gallery-item {
+    height: 150px; /* smaller height for phones */
   }
 }
