@@ -112,6 +112,14 @@ header {
 /* --------------------------------------------------
    HERO SECTION
 -------------------------------------------------- */
+/* Gallery grid layout */
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 /* Fix for gallery grid items */
 .gallery-item {
   width: 100%;
