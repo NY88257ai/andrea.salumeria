@@ -54,6 +54,9 @@ rotateHero();
 
 
 /* ========= GALLERY CAROUSEL AUTO-SCROLLING SLIDE CAROUSEL ========= */
+/* ========= AUTO-SCROLLING SLIDE CAROUSEL ========= */
+console.log("Gallery script is running");
+
 const galleryImages = [
   "photos/gallery/footerhero1.jpg",
   "photos/gallery/footerhero2.jpg",
@@ -82,13 +85,13 @@ if (galleryTrack) {
   });
 
   let scrollAmount = 0;
-  const slideWidth = 260 + 16; // slide width + gap
+  const slideWidth = 260 + 16;
 
   function autoScrollCarousel() {
     scrollAmount += slideWidth;
 
     if (scrollAmount >= galleryTrack.scrollWidth - galleryTrack.clientWidth) {
-      scrollAmount = 0; // reset to start
+      scrollAmount = 0;
     }
 
     galleryTrack.scrollTo({
@@ -97,7 +100,9 @@ if (galleryTrack) {
     });
   }
 
-  setInterval(autoScrollCarousel, 2500); // every 2.5 seconds
+  setInterval(autoScrollCarousel, 2500);
+} else {
+  console.log("ERROR: #gallery-track not found");
 }
 
 /* ========= ACCORDION MENU ========= */
