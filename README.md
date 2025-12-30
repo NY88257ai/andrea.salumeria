@@ -36,6 +36,11 @@ andrea.salumeria/
     ├── logo/         # Branding assets
     ├── social media/ # Social graphics
     └── screenshots/  # (Optional) README screenshots
+
+banner.png   - README header banner
+qc.qr.png    - QR code for GitHub Pages version
+pd.qr.png    - QR code for production domain
+
 ✨ Features
 🎞️ Hero Image Rotator
 A smooth, auto‑advancing hero carousel featuring deli, sandwich, and store photography.
