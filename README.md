@@ -10,10 +10,14 @@ The site showcases our menu, homemade mozzarella, imported specialties, history,
 🌐 Live Website
 https://ny88257ai.github.io/andrea.salumeria/
 
-![QR Code](photos/screenshots/qr.png)
+![QC QR Code](photos/screenshots/qc.qr.png)
 
-> Scan this code to open Andrea Salumeria on your phone. (New qr code needs to be created once move to prod)!!!
+> Scan this code to open Andrea Salumeria on your phone (GITHUB TEST SITE)
 
+![Production QR Code](photos/screenshots/pd.qr.png)
+
+> Scan this code to open Andrea Salumeria on your phone (PRODUCTION WEBSITE)
+> 
 📸 Screenshots
 Screenshots can be added here later. Just drop images into /photos/screenshots/ and reference them.
 
