@@ -1,132 +1,256 @@
-# Andrea Salumeria — Official Website  
-**Fine Italian Deli & Grocery • Jersey City, NJ • Since 1975**
+🍅 Andrea Salumeria — Official Website
+Fine Italian Deli & Grocery • Jersey City, NJ • Since 1975
 
-This repository contains the full website for **Andrea Salumeria**, a family‑owned Italian deli and grocery serving Jersey City for nearly 50 years.  
-The site includes our menu, imported specialties, gallery, history, and more — all in a clean, modern layout with a rotating hero carousel.
+  
+  
+  
 
----
+This repository contains the complete source code for the official website of Andrea Salumeria, a family‑owned Italian deli serving Jersey City for nearly 50 years.
+The site showcases our menu, homemade mozzarella, imported specialties, history, and photography — all wrapped in a warm, classic Italian aesthetic.
 
-## 📍 Live Website  
-Hosted via GitHub Pages:  
-**https://ny88257ai.github.io/andrea.salumeria-/**
+🌐 Live Website
+https://ny88257ai.github.io/andrea.salumeria/
 
-Scan the QR code below to open the site on your phone:
+Scan to open on mobile:
 
-![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ny88257ai.github.io/andrea.salumeria-/)
 
----
+📸 Screenshots
+Screenshots can be added here later. Just drop images into /photos/screenshots/ and reference them.
 
-## 📁 Project Structure
-
-```
-andrea.salumeria-/
-│ index.html
-│ styles.css
-│ script.js
-│ manifest.json
-│ README.md
+📁 Project Structure
+Code
+andrea.salumeria/
+│ index.html          # Main site structure
+│ styles.css          # Unified global stylesheet
+│ script.js           # Hero rotator + gallery carousel logic
+│ manifest.json       # PWA metadata (optional)
+│ README.md           # Project documentation
 │
 └── photos/
-    ├── hero/        # Homepage carousel images
-    ├── gallery/     # Food & store photography
-    ├── logo/        # Branding assets
-    └── social media/
-```
+    ├── hero/         # Homepage hero carousel images
+    ├── gallery/      # Food & store photography
+    ├── logo/         # Branding assets
+    ├── social media/ # Social graphics
+    └── screenshots/  # (Optional) README screenshots
+✨ Features
+🎞️ Hero Image Rotator
+A smooth, auto‑advancing hero carousel featuring deli, sandwich, and store photography.
 
----
+🖼️ Horizontal Gallery Carousel
+A modern, swipe‑friendly horizontal image track replacing the old grid.
 
-## 🧾 Features
+🎨 Unified Design System
+All styling consolidated into styles.css, including:
 
-### ✔ Hero Image Carousel  
-A rotating set of deli, sandwich, and product photos.
+Original cream & rustic palette
 
-### ✔ Accordion Menu Sections  
-All menu categories are expandable/collapsible:
+Playfair Display + Lato typography
 
-- Sandwich Menu  
-- Imported Cheeses  
-- Breads  
-- Deli Meats  
-- Salads & Soups  
-- Grocery Items  
-- Catering Trays  
-- **Coming Soon: Andrea’s Apparel**
+Updated spacing, shadows, and card styles
 
-### ✔ QR Codes (3 Locations)  
-QR codes appear:
+Mobile‑optimized layout
 
-- Near the “Order a Sandwich” button  
-- In the Menu section  
-- In the Footer  
+📱 Mobile Navigation Enhancements
+On small screens:
 
-All link directly to the live website.
+Centered logo
 
-### ✔ Mobile‑Friendly Navigation  
-Clean slide‑down menu on phones and tablets.
+Centered nav links
 
-### ✔ Gallery Grid  
-A responsive grid of high‑quality food and store images.
+Slide‑down menu
 
----
+Touch‑optimized “Order” button
 
-## 🛠️ Updating the Website
+📋 Menu Sections (Accordion)
+Expandable categories for:
 
-### **Update Menu Items**
-Edit the accordion content inside `index.html`.
+Sandwiches
 
-### **Update Photos**
-Add or replace images inside:
+Imported Cheeses
 
-```
-/photos/hero
-/photos/gallery
-/photos/logo
-```
+Deli Meats
 
-Then update paths in `index.html` if needed.
+Breads
 
-### **Update Carousel Images**
-Modify the array in `script.js`:
+Salads & Soups
 
-```js
+Grocery Items
+
+Catering
+
+Apparel (coming soon)
+
+🧾 QR Codes
+QR codes appear in:
+
+Header
+
+Menu section
+
+Footer
+
+All point to the live site.
+
+🏪 About & Visit Sections
+Includes:
+
+Store history
+
+Contact info
+
+Hours
+
+Map embed
+
+Social icons
+
+🔧 How to Update the Website
+Update Menu Items
+Edit the accordion content inside index.html.
+
+Update Hero Images
+Add images to:
+
+Code
+/photos/hero/
+Then update the array in script.js:
+
+js
 const heroImages = [
   "photos/hero/hero1.jpg",
   "photos/hero/hero2.jpg",
   ...
 ];
-```
+Update Gallery Images
+Add photos to:
 
-### **Update Styles**
-All styling is in `styles.css`.
+Code
+/photos/gallery/
+Update Styles
+All styling lives in:
 
-### **Update QR Code**
-QR codes automatically point to the GitHub Pages URL.  
-If the URL changes, update the QR code links in `index.html`.
+Code
+styles.css
+No inline CSS should be added.
 
----
+Update QR Codes
+If the site URL changes, update the QR code URLs in index.html.
 
-## 👕 Coming Soon: Andrea’s Apparel  
-Show your love for Andrea Salumeria with exclusive merch — shirts, hats, hoodies, and more.  
-A full apparel line inspired by our 50‑year heritage is currently in development.  
-Stay tuned for launch details and pre‑order information.
+🚧 Roadmap (2025–2026)
+🥪 1. Order Flow Redesign
+The current “Order a Sandwich” button opens a form, but the workflow needs clarity.
+Planned improvements:
 
----
+Rename button to Start Your Order
 
-## 👨‍🍳 About Andrea Salumeria  
-A Jersey City institution since 1975, Andrea Salumeria is known for:
+Add required fields (name, phone, pickup time)
 
-- Homemade mozzarella  
-- Famous Italian sandwiches  
-- Imported cheeses & meats  
-- Fresh breads  
-- Authentic grocery items  
-- Family tradition and hospitality  
+Add order confirmation screen
 
----
+Add email/SMS notification to store
 
-## 📬 Contact  
-For updates, menu changes, or website improvements, reach out to the repository owner.
+Add order tracking number
 
----
+💳 2. Payment Integration
+Options being evaluated:
 
-**© 2025 Andrea Salumeria — Fine Italian Deli & Grocery**
+Stripe
+
+Square
+
+Clover (in‑store POS integration)
+
+Goal: allow customers to pay online before pickup.
+
+🧺 3. Catering Order System
+A dedicated catering form with:
+
+Tray sizes
+
+Guest count
+
+Pickup/delivery options
+
+Deposit or full payment
+
+👕 4. Andrea’s Apparel Store
+Launch an online merch section featuring:
+
+T‑shirts
+
+Hoodies
+
+Hats
+
+Limited‑edition designs
+
+SICUREZZA NINJA™ line
+
+📰 5. Daily Specials Auto‑Update
+Admin‑side tool to update:
+
+Special of the Day
+
+Fresh items
+
+Limited batches
+
+📸 6. Lightbox Gallery
+Tap any gallery image to open a fullscreen viewer.
+
+📱 7. PWA (Installable App)
+Turn the site into an installable app on iOS/Android.
+
+🤝 Contributing
+This is a private project for Andrea Salumeria.
+If you’d like to propose improvements:
+
+Create a new branch
+
+Make your changes
+
+Submit a pull request
+
+The repository owner will review it
+
+🗂️ Changelog
+v2.0 — Major Redesign (2025)
+Restored original color palette
+
+Moved all inline CSS to styles.css
+
+Rebuilt hero image rotator
+
+Added horizontal gallery carousel
+
+Improved mobile navigation
+
+Cleaned HTML structure
+
+Updated README
+
+v1.0 — Initial Launch (2024)
+First public version of the site
+
+Menu, gallery, and about sections added
+
+🧑‍🍳 About Andrea Salumeria
+Since 1975, Andrea Salumeria has been a Jersey City staple known for:
+
+Homemade mozzarella (made fresh daily)
+
+Famous Italian sandwiches
+
+Imported cheeses & meats
+
+Fresh breads
+
+Authentic grocery items
+
+Nearly 50 years of family tradition
+
+📬 Contact
+For updates, improvements, or contributions, contact the repository owner.
+
+© 2025 Andrea Salumeria — Fine Italian Deli & Grocery  
+All rights reserved.
