@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-  color: #8b1a1a; /* your brand red */
+  color: #8b1a1a;
   text-decoration: underline;
 }
 
@@ -67,7 +67,7 @@ header {
 }
 
 .site-logo {
-  height: 90px; /* UPDATED: bigger logo */
+  height: 90px;
   width: auto;
 }
 
@@ -122,31 +122,6 @@ header {
 /* --------------------------------------------------
    HERO SECTION
 -------------------------------------------------- */
-/* Gallery grid layout */
-#gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-/* Fix for gallery grid items */
-.gallery-item {
-  width: 100%;
-  height: 180px;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #eee; /* fallback if image fails */
-}
-
-/* Make images fill the box */
-.gallery-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 .hero {
   min-height: 450px;
   max-height: 550px;
@@ -158,7 +133,6 @@ header {
   transition: background-image 0.6s ease-in-out;
 }
 
-/* Soft vignette */
 .hero::after {
   content: "";
   position: absolute;
@@ -167,7 +141,6 @@ header {
   pointer-events: none;
 }
 
-/* Center + pad hero content */
 .hero-inner {
   max-width: 650px;
   margin: 0 auto;
@@ -176,33 +149,29 @@ header {
   z-index: 2;
 }
 
-/* Eyebrow */
 .hero-eyebrow {
-  color: #2f6f4e; /* your green accent */
+  color: #2f6f4e;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-/* Title — UPDATED */
 .hero-title {
   font-size: 3rem;
   margin: 1rem 0;
   line-height: 1.2;
-  color: #8b1a1a; /* brand red */
+  color: #8b1a1a;
   text-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
 
-/* Subtitle — UPDATED */
 .hero-subtitle {
   max-width: 550px;
   opacity: 1;
   margin-bottom: 1.5rem;
-  color: #222; /* clean, readable */
+  color: #222;
   text-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
 
-/* Pills */
 .pill-group {
   margin-bottom: 1rem;
   display: flex;
@@ -224,7 +193,6 @@ header {
   color: #fff;
 }
 
-/* Buttons */
 .hero-actions {
   display: flex;
   gap: 1rem;
@@ -261,7 +229,6 @@ header {
   color: #fff;
 }
 
-/* Fade animation */
 .fade-in {
   animation: fadeHero 1.2s ease-in-out forwards;
 }
@@ -335,31 +302,28 @@ header {
 }
 
 /* --------------------------------------------------
-   GALLERY CAROUSEL
+   GALLERY — BASE (DESKTOP + TABLET)
 -------------------------------------------------- */
-.gallery-carousel {
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-bottom: 1rem;
-}
-
-.gallery-track {
-  display: flex;
+#gallery-grid {
+  display: grid;
   gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 2rem;
 }
 
-.gallery-slide {
-  min-width: 260px;
+.gallery-item {
+  width: 100%;
   height: 180px;
   border-radius: 8px;
   overflow: hidden;
-  flex-shrink: 0;
+  background: #eee;
 }
 
-.gallery-slide img {
+.gallery-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* --------------------------------------------------
@@ -414,36 +378,10 @@ footer {
 }
 
 /* --------------------------------------------------
-   GALLERY — BASE (DESKTOP + TABLET)
--------------------------------------------------- */
-#gallery-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  width: 100%;
-  height: 180px; /* default size for larger screens */
-  border-radius: 8px;
-  overflow: hidden;
-  background: #eee; /* fallback if image fails */
-}
-
-.gallery-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* --------------------------------------------------
    MOBILE RESPONSIVE (480px and below)
 -------------------------------------------------- */
 @media (max-width: 480px) {
 
-  /* Your existing mobile rules stay here unchanged */
   .hero-inner {
     padding: 0 1.5rem;
   }
@@ -469,8 +407,8 @@ footer {
     display: flex;
   }
 
-  /* NEW: Mobile gallery tweak */
+  /* Mobile gallery tweak */
   .gallery-item {
-    height: 150px; /* smaller height for phones */
+    height: 150px;
   }
 }
