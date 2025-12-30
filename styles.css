@@ -414,9 +414,3 @@ footer {
   .nav-links.open {
     display: flex;
   }
-
-  /* Mobile gallery tweak */
-  .gallery-item {
-    height: 150px;
-  }
-}
