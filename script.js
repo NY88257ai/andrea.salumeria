@@ -68,7 +68,7 @@ if (heroImages.length > 0 && heroVisual) {
   setInterval(rotateHero, heroDuration);
 }
 
-/* ========= GALLERY CAROUSEL ========= */
+/* ========= GALLERY CAROUSEL AUTO-SCROLLING SLIDE CAROUSEL ========= */
 const galleryImages = [
   "photos/gallery/footerhero1.jpg",
   "photos/gallery/footerhero2.jpg",
@@ -81,21 +81,38 @@ const galleryImages = [
   "photos/gallery/tray5.jpg"
 ];
 
-const galleryTrack = document.getElementById('gallery-track');
+const galleryTrack = document.getElementById("gallery-track");
 
-if (galleryTrack && galleryImages.length > 0) {
+if (galleryTrack) {
   galleryImages.forEach(src => {
-    const slide = document.createElement('div');
-    slide.className = 'gallery-slide';
+    const slide = document.createElement("div");
+    slide.className = "gallery-slide";
 
-    const img = document.createElement('img');
+    const img = document.createElement("img");
     img.src = src;
-    img.alt = "";
-    img.className = 'gallery-photo';
+    img.className = "gallery-photo";
 
     slide.appendChild(img);
     galleryTrack.appendChild(slide);
   });
+
+  let scrollAmount = 0;
+  const slideWidth = 260 + 16; // slide width + gap
+
+  function autoScrollCarousel() {
+    scrollAmount += slideWidth;
+
+    if (scrollAmount >= galleryTrack.scrollWidth - galleryTrack.clientWidth) {
+      scrollAmount = 0; // reset to start
+    }
+
+    galleryTrack.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth"
+    });
+  }
+
+  setInterval(autoScrollCarousel, 2500); // every 2.5 seconds
 }
 
 /* ========= ACCORDION MENU ========= */
