@@ -1,8 +1,3 @@
-console.log("Gallery script is running");
-
-</main>
-  
-<script>
 /* ========= MOBILE NAV ========= */
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -20,7 +15,7 @@ if (yearEl) {
 }
 
 /* ========= HERO FADE ROTATOR ========= */
-let heroImages = [
+const heroImages = [
   "photos/hero/hero1.jpg",
   "photos/hero/hero2.jpg",
   "photos/hero/hero3.jpg",
@@ -31,10 +26,8 @@ let heroImages = [
   "photos/hero/wassup.jpg"
 ];
 
-shuffle(heroImages);
-
-let heroIndex = 0;
 const heroEl = document.querySelector(".hero");
+let heroIndex = 0;
 
 function rotateHero() {
   if (!heroEl) return;
@@ -46,15 +39,15 @@ function rotateHero() {
     heroEl.classList.remove("fade");
 
     heroIndex = (heroIndex + 1) % heroImages.length;
-  }, 800); // matches fade duration
+  }, 800);
 }
 
-setInterval(rotateHero, 4000);
-rotateHero();
+if (heroEl) {
+  rotateHero();
+  setInterval(rotateHero, 4000);
+}
 
-
-/* ========= GALLERY CAROUSEL AUTO-SCROLLING SLIDE CAROUSEL ========= */
-/* ========= AUTO-SCROLLING SLIDE CAROUSEL ========= */
+/* ========= GALLERY CAROUSEL ========= */
 console.log("Gallery script is running");
 
 const galleryImages = [
@@ -78,6 +71,7 @@ if (galleryTrack) {
 
     const img = document.createElement("img");
     img.src = src;
+    img.alt = "";
     img.className = "gallery-photo";
 
     slide.appendChild(img);
@@ -134,7 +128,3 @@ function openGoogleReview() {
   const reviewUrl = "https://www.google.com/maps/place/Andrea+Salumeria/data=!4m2!3m1!1s0x0:0x61689fe0e35ef8a5?sa=X";
   window.open(reviewUrl, "_blank");
 }
-</script>
-
-</body>
-</html>
