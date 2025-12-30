@@ -1439,12 +1439,20 @@
   }
 
   // ========= GALLERY =========
-  // IMPORTANT:
-  // 1) Place gallery photos in: photos/gallery/
-  // 2) Add their filenames to this array
-  // 3) The script will render them automatically
+ // ========= GALLERY =========
+const galleryImages = [
+  "photos/gallery/footerhero1.jpg",
+  "photos/gallery/footerhero2.jpg",
+  "photos/gallery/homemadepestopasta.jpg",
+  "photos/gallery/saladtray1.jpg",
+  "photos/gallery/tray1.jpg",
+  "photos/gallery/tray2.jpg",
+  "photos/gallery/tray3.jpg",
+  "photos/gallery/tray4.jpg",
+  "photos/gallery/tray5.jpg"
+];
 
-  const galleryTrack = document.getElementById("gallery-track");
+const galleryTrack = document.getElementById("gallery-track");
 
 if (galleryTrack && galleryImages.length > 0) {
   galleryImages.forEach(src => {
@@ -1461,7 +1469,7 @@ if (galleryTrack && galleryImages.length > 0) {
   });
 
   let scrollAmount = 0;
-  const slideWidth = 260 + 16; // slide width + gap
+  const slideWidth = 260 + 16;
 
   function autoScrollCarousel() {
     scrollAmount += slideWidth;
