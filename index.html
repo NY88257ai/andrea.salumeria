@@ -726,14 +726,19 @@
   }
 
   function rotateHero() {
-    if (heroImages.length <= 1) {
-      showHeroImage(0);
-      return;
-    }
-    heroVisual.classList.remove('hero-visual--active');
+  if (heroImages.length <= 1) {
+    showHeroImage(0);
+    return;
+  }
+
+  heroVisual.classList.remove('hero-visual--active');
+
+  // Give the browser a moment to process the class removal
+  setTimeout(() => {
     currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
     showHeroImage(currentHeroIndex);
-  }
+  }, 60); // 60ms is the sweet spot
+}
 
   if (heroImages.length > 0 && heroVisual) {
     showHeroImage(currentHeroIndex);
