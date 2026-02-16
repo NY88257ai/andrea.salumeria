@@ -147,6 +147,13 @@ header {
   width: 100%;
 }
 
+/* added 02162026 */
+.nav-links a {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
 .nav-cta {
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
