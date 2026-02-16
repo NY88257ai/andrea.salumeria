@@ -37,7 +37,7 @@ a {
 
 .container {
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 0 left;
   padding: 0 1.25rem;
 }
 
