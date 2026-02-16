@@ -732,21 +732,3 @@ footer {
 
 .mt-small { margin-top: 0.5rem; }
 .mt-med { margin-top: 1rem; }
-
-/* Center the entire Favorites + Soups sections */
-#customer-favorites .container,
-#soup-of-the-day .container {
-  max-width: 750px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Keep card content left-aligned */
-#customer-favorites .card-header,
-#customer-favorites .card-body,
-#soup-of-the-day .card-header,
-#soup-of-the-day .card-body {
-  text-align: left;
-}
-
