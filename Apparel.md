@@ -128,9 +128,163 @@ Hoodies
 - “Tranquil Minds Choose Salumi.”
 - “Find Your Tranquil at the Deli Counter.”
 
+==============================================================
 
+🕰️ EST. 1975 — HERITAGE SLOGANS
+Classic + Clean
+• 	“Andrea Salumeria — EST. 1975”
+• 	“Quality Since 1975”
+• 	“Proudly Serving Jersey City Since 1975”
+• 	“Tradition EST. 1975”
+• 	“Authentic Italian Flavor — EST. 1975”
 
+🧘‍♂️ TRANQUIL x 1975
+• 	“Tranquil Since 1975.”
+• 	“Stay Tranquil — EST. 1975.”
+• 	“Tranquil Roots. EST. 1975.”
+• 	“Find Your Tranquil — Established 1975.”
+• 	“Keeping Jersey City Tranquil Since ’75.”
 
+🥪 FOOD x 1975
+• 	“Famous Sandwiches Since 1975.”
+• 	“Prosciutto & Mozz — EST. 1975.”
+• 	“Made Fresh Daily Since 1975.”
+• 	“Crafting Flavor Since ’75.”
+• 	“Where Flavor Has Been EST. 1975.”
+
+🔥 ATTITUDE + 1975
+• 	“Old School Since ’75.”
+• 	“Real Deli. Real Flavor. EST. 1975.”
+• 	“Born in Italy. Built in Jersey City. EST. 1975.”
+• 	“Heritage You Can Taste — EST. 1975.”
+• 	“The OG Salumeria — EST. 1975.”
+
+👕 APPAREL‑READY LAYOUTS
+Shirt Concept A — Minimalist
+Front (small chest print):
+“EST. 1975”
+Back (big graphic):
+“Andrea Salumeria — Jersey City”
+
+Shirt Concept B — Tranquil Line
+Front:
+“Stay Tranquil.”
+Back:
+“EST. 1975 — Andrea Salumeria”
+
+Shirt Concept C — Food Lover
+Front:
+“Prosciutto. Mozz. Tranquil.”
+Back:
+“EST. 1975 — Jersey City’s Original Salumeria”
+
+Hat Concepts
+• 	“EST. 1975 — Andrea”
+• 	“Tranquil Since ’75”
+• 	“Andrea Salumeria — JC”
+• 	“1975 Originals”
+
+🧵 ANDREA SALUMERIA — “EST. 1975 COLLECTION”
+1. The Heritage Tee
+Slogan:
+“Andrea Salumeria — EST. 1975”
+Design Direction:
+• 	Classic deli typography
+• 	Italian + American flags under the date
+• 	Clean, vintage look
+• 	Works in white, black, forest green, or heather grey
+
+2. The Tranquil ’75 Tee
+Slogan:
+“Tranquil Since 1975.”
+Design Direction:
+• 	Minimalist front chest print
+• 	Back print with the full logo
+• 	Soft, modern streetwear vibe
+
+3. The Prosciutto Legacy Tee
+Slogan:
+“Prosciutto & Mozz — EST. 1975.”
+Design Direction:
+• 	Bold deli‑counter lettering
+• 	Could include a subtle outline of a slicer or sandwich
+• 	Perfect for food lovers and regulars
+
+4. The Jersey City Original Tee
+Slogan:
+“Jersey City Original — EST. 1975.”
+Design Direction:
+• 	Retro athletic style
+• 	Big block letters
+• 	Appeals to locals and neighborhood pride
+
+5. The Tranquil Sandwich Tee
+Slogan:
+“Stay Tranquil — Eat a Famous Sandwich.”
+Design Direction:
+• 	Front: small “Stay Tranquil”
+• 	Back: list of your classics (Combo, Soprano, What’s Up, Italian Tuna, Pete’s Special Tuna)
+• 	“EST. 1975” stamped at the bottom
+
+🧥 HOODIES
+6. The OG Hoodie
+Slogan:
+“The Original Salumeria — EST. 1975.”
+Design Direction:
+• 	Heavyweight hoodie
+• 	Large back print
+• 	Front chest logo
+
+7. The Tranquil Heavyweight
+Slogan:
+“Stay Tranquil — EST. 1975.”
+Design Direction:
+• 	Clean, modern, minimal
+• 	Great for winter and staff wear
+
+🧢 HATS
+8. The ’75 Classic Cap
+Slogan:
+“EST. 1975 — Andrea”
+9. The Tranquil Dad Hat
+Slogan:
+“Stay Tranquil”
+10. The JC Heritage Hat
+Slogan:
+“Andrea Salumeria — JC ’75”
+Design notes:
+• 	Embroidery only
+• 	Simple, bold, timeless
+
+🧤 APRONS
+11. The Deli Master Apron
+Slogan:
+“Crafting Flavor Since 1975.”
+12. The Tranquil Chef Apron
+Slogan:
+“Stay Tranquil — Slice Like a Pro.”
+
+👜 TOTE BAGS
+13. The Market Tote
+Slogan:
+“Made Fresh Daily — EST. 1975.”
+14. The Tranquil Shopper
+Slogan:
+“Stay Tranquil. Eat Italian.”
+
+🔖 STICKERS / SMALL MERCH
+15. Sticker Pack Ideas
+• 	“Tranquil Since ’75”
+• 	“Prosciutto Powered”
+• 	“Andrea’s Famous Sandwiches”
+• 	“Two Flags. One Flavor.”
+• 	“JC Original — EST. 1975”
+
+🪧 IN‑STORE SIGNAGE / POSTERS
+16. Heritage Poster
+“Serving Jersey City Since 1975 — Family, Flavor, Tradition.”
+17. Tranquil Motto Poster
+“Stay Tranquil. Eat Prosciutto.”
 
 
 
