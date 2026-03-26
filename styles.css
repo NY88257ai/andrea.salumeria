@@ -528,6 +528,10 @@ header {
   color: var(--color-muted);
 }
 
+.menu-section-spaced {
+  margin-top: 2rem; /* adjust to your liking */
+}
+
 .menu-note {
   font-size: 0.85rem;
   color: var(--color-muted);
