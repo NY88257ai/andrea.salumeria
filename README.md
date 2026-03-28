@@ -1,6 +1,3 @@
-![Andrea Salumeria Banner](photos/screenshots/banner.png)
-
-
 🍅 Andrea Salumeria — Official Website
 Fine Italian Deli & Grocery • Jersey City, NJ • Since 1975
 
@@ -9,12 +6,6 @@ The site showcases our menu, homemade mozzarella, imported specialties, history,
 
 🌐 Live Website
 https://ny88257ai.github.io/andrea.salumeria/
-
-![QC QR Code](photos/screenshots/qc.qr.png)
-
-> Scan this code to open Andrea Salumeria on your phone (GITHUB TEST SITE)
-
-![Production QR Code](photos/screenshots/pd.qr.png)
 
 > Scan this code to open Andrea Salumeria on your phone (PRODUCTION WEBSITE)
 > 
