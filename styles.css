@@ -544,6 +544,10 @@ header {
   gap: 2rem;
 }
 
+#sandwiches .menu-columns {
+  justify-items: start;
+}
+
 /* About */
 .about-grid {
   display: grid;
