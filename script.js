@@ -21,7 +21,7 @@ const heroImages = [
   "photos/hero/hero3.jpg",
   "photos/hero/hero4.jpg",
   "photos/hero/hero5.jpg",
-  "photos/hero/herotrya1.jpg",
+  "photos/hero/herotray1.jpg",
   "photos/hero/prosciuttodiparma.jpg",
   "photos/hero/wassup.jpg"
 ];
