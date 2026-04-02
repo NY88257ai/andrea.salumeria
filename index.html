@@ -702,8 +702,8 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // ========= HERO ROTATOR =========
-  let heroImages = [
+  // ========= HERO ROTATOR – Ken Burns =========
+  const heroImages = [
     "photos/hero/hero1.jpg",
     "photos/hero/hero2.jpg",
     "photos/hero/hero3.jpg",
@@ -714,50 +714,55 @@
     "photos/hero/wassup.jpg"
   ];
 
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+  heroImages.forEach(src => { const i = new Image(); i.src = src; });
+
+  const heroVisualWrapper = document.querySelector(".hero-visual-wrapper");
+  let heroIndex = 0;
+
+  const kenBurnsVariants = [
+    { transformStart: "scale(1.08) translate(-2%, -2%)", transformEnd: "scale(1.0) translate(2%, 2%)" },
+    { transformStart: "scale(1.0) translate(2%, 2%)",    transformEnd: "scale(1.08) translate(-2%, -2%)" },
+    { transformStart: "scale(1.06) translate(0%, -3%)",  transformEnd: "scale(1.0) translate(0%, 3%)" },
+    { transformStart: "scale(1.0) translate(-3%, 0%)",   transformEnd: "scale(1.06) translate(3%, 0%)" },
+  ];
+
+  function createLayer(src, index) {
+    const wrapper = document.createElement("div");
+    wrapper.style.cssText = "position:absolute;inset:0;overflow:hidden;opacity:0;transition:opacity 1.5s ease-in-out;z-index:0;";
+    const inner = document.createElement("div");
+    const kb = kenBurnsVariants[index % kenBurnsVariants.length];
+    inner.style.cssText = `position:absolute;inset:-6%;background:url('${src}') center/cover no-repeat;transform:${kb.transformStart};transition:transform 6s ease-in-out;`;
+    wrapper.appendChild(inner);
+    return { wrapper, inner, kb };
+  }
+
+  if (heroVisualWrapper) {
+    const overlay = heroVisualWrapper.querySelector(".hero-visual-overlay");
+    const label   = heroVisualWrapper.querySelector(".hero-visual-label");
+    if (overlay) overlay.style.zIndex = "1";
+    if (label)   label.style.zIndex   = "2";
+
+    function showNext() {
+      const { wrapper, inner, kb } = createLayer(heroImages[heroIndex], heroIndex);
+      heroVisualWrapper.insertBefore(wrapper, heroVisualWrapper.firstChild);
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        wrapper.style.opacity = "1";
+        inner.style.transform = kb.transformEnd;
+      }));
+      setTimeout(() => {
+        const layers = heroVisualWrapper.querySelectorAll(":scope > div[style]");
+        layers.forEach((l, i) => {
+          if (i < layers.length - 1 && l !== overlay && l !== label) {
+            l.style.opacity = "0";
+            setTimeout(() => l.remove(), 1500);
+          }
+        });
+      }, 1500);
+      heroIndex = (heroIndex + 1) % heroImages.length;
     }
-  }
 
-  shuffle(heroImages);
-
-  const heroVisual = document.getElementById('hero-visual');
-  let currentHeroIndex = 0;
-  const heroDuration = 6000;
-
-  function showHeroImage(index) {
-    if (!heroVisual || heroImages.length === 0) return;
-    const src = heroImages[index];
-    heroVisual.style.opacity = 0;
-    setTimeout(() => {
-      heroVisual.style.backgroundImage = `url("${src}")`;
-      requestAnimationFrame(() => {
-        heroVisual.classList.add('hero-visual--active');
-        heroVisual.style.opacity = 1;
-      });
-    }, 200);
-  }
-
-  function rotateHero() {
-  if (heroImages.length <= 1) {
-    showHeroImage(0);
-    return;
-  }
-
-  heroVisual.classList.remove('hero-visual--active');
-
-  // Give the browser a moment to process the class removal
-  setTimeout(() => {
-    currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
-    showHeroImage(currentHeroIndex);
-  }, 60); // 60ms is the sweet spot
-}
-
-  if (heroImages.length > 0 && heroVisual) {
-    showHeroImage(currentHeroIndex);
-    setInterval(rotateHero, heroDuration);
+    showNext();
+    setInterval(showNext, 5000);
   }
 
   // ========= GALLERY =========
