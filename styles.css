@@ -776,5 +776,9 @@ section {
   padding: calc(var(--space-block) * 0.35) 0;
 }
 
+.hero-visual-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 .mt-small { margin-top: 0.5rem; }
 .mt-med { margin-top: 1rem; }
