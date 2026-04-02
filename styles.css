@@ -581,6 +581,19 @@ header {
   border: 1px dashed rgba(0,0,0,0.09);
 }
 
+.about-card--photo {
+  padding: 0;
+  overflow: hidden;
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-card);
+}
+
 .about-meta {
   font-size: 0.9rem;
   color: var(--color-muted);
