@@ -750,14 +750,14 @@
         inner.style.transform = kb.transformEnd;
       }));
       setTimeout(() => {
-        const layers = heroVisualWrapper.querySelectorAll(":scope > div[style]");
-        layers.forEach((l, i) => {
-          if (i < layers.length - 1 && l !== overlay && l !== label) {
-            l.style.opacity = "0";
-            setTimeout(() => l.remove(), 1500);
-          }
-        });
-      }, 1500);
+	  const layers = heroVisualWrapper.querySelectorAll(":scope > div[style]");
+	  layers.forEach((l, i) => {
+	    if (i < layers.length - 1 && l !== overlay && l !== label) {
+	      l.style.opacity = "0";
+	      setTimeout(() => l.remove(), 1500);
+	    }
+	  });
+	}, 3000);
       heroIndex = (heroIndex + 1) % heroImages.length;
     }
 
