@@ -34,16 +34,16 @@ let heroIndex = 0;
 
 const kenBurnsVariants = [
   { transformStart: "scale(1.08) translate(-2%, -2%)", transformEnd: "scale(1.0) translate(2%, 2%)" },
-  { transformStart: "scale(1.0) translate(2%, 2%)",   transformEnd: "scale(1.08) translate(-2%, -2%)" },
-  { transformStart: "scale(1.06) translate(0%, -3%)", transformEnd: "scale(1.0) translate(0%, 3%)" },
-  { transformStart: "scale(1.0) translate(-3%, 0%)",  transformEnd: "scale(1.06) translate(3%, 0%)" },
+  { transformStart: "scale(1.0) translate(2%, 2%)",    transformEnd: "scale(1.08) translate(-2%, -2%)" },
+  { transformStart: "scale(1.06) translate(0%, -3%)",  transformEnd: "scale(1.0) translate(0%, 3%)" },
+  { transformStart: "scale(1.0) translate(-3%, 0%)",   transformEnd: "scale(1.06) translate(3%, 0%)" },
 ];
 
 function createLayer(src, index) {
   const wrapper = document.createElement("div");
   wrapper.style.cssText = `
     position: absolute; inset: 0; overflow: hidden;
-    opacity: 0; transition: opacity 1.5s ease-in-out;
+    opacity: 0; transition: opacity 1.5s ease-in-out; z-index: 0;
   `;
 
   const inner = document.createElement("div");
@@ -60,23 +60,25 @@ function createLayer(src, index) {
 }
 
 if (heroVisualWrapper) {
-  heroVisualWrapper.style.position = "relative";
+  // ensure overlay and label sit above the photo layers
+  const overlay = heroVisualWrapper.querySelector(".hero-visual-overlay");
+  const label = heroVisualWrapper.querySelector(".hero-visual-label");
+  if (overlay) overlay.style.zIndex = "1";
+  if (label) label.style.zIndex = "2";
 
   function showNext() {
     const { wrapper, inner, kb } = createLayer(heroImages[heroIndex], heroIndex);
-    heroVisualWrapper.appendChild(wrapper);
+    heroVisualWrapper.insertBefore(wrapper, heroVisualWrapper.firstChild);
 
-    // fade in + start Ken Burns
     requestAnimationFrame(() => requestAnimationFrame(() => {
       wrapper.style.opacity = "1";
       inner.style.transform = kb.transformEnd;
     }));
 
-    // fade out and remove previous layers after transition
     setTimeout(() => {
-      const layers = heroVisualWrapper.querySelectorAll(":scope > div");
+      const layers = heroVisualWrapper.querySelectorAll(":scope > div[style]");
       layers.forEach((l, i) => {
-        if (i < layers.length - 1) {
+        if (i < layers.length - 1 && l !== overlay && l !== label) {
           l.style.opacity = "0";
           setTimeout(() => l.remove(), 1500);
         }
@@ -91,8 +93,6 @@ if (heroVisualWrapper) {
 }
 
 /* ========= GALLERY CAROUSEL ========= */
-console.log("Gallery script is running");
-
 const galleryImages = [
   "photos/gallery/footerhero1.jpg",
   "photos/gallery/footerhero2.jpg",
@@ -138,8 +138,6 @@ if (galleryTrack) {
   }
 
   setInterval(autoScrollCarousel, 2500);
-} else {
-  console.log("ERROR: #gallery-track not found");
 }
 
 /* ========= ACCORDION MENU ========= */
