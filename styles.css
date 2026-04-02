@@ -171,11 +171,6 @@ header {
 .nav-cta:hover {
   background: var(--color-primary-dark);
   transform: translateY(-1px);
-  text-decoration: none;
-}
-
-.nav-cta::after {
-  display: none !important;
 }
 
 .nav-toggle {
@@ -369,26 +364,8 @@ header {
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(0,0,0,0.05);
-  background: #000;
-  min-height: 260px;
-}
-
-.hero-visual {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 70%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform-origin: center center;
-  transition: opacity 1.2s ease-out, transform 6s ease-out;
-  opacity: 0;
-}
-
-.hero-visual.hero-visual--active {
-  opacity: 1;
-  transform: scale(1.04);
+  background: var(--color-cream-dark);
+  min-height: 420px;
 }
 
 .hero-visual-overlay {
@@ -396,6 +373,7 @@ header {
   inset: 0;
   background: radial-gradient(circle at bottom, rgba(0,0,0,0.45), transparent 55%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-visual-label {
@@ -409,6 +387,7 @@ header {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
+  z-index: 2;
 }
 
 @media (max-width: 900px) {
@@ -776,9 +755,5 @@ section {
   padding: calc(var(--space-block) * 0.35) 0;
 }
 
-.hero-visual-wrapper {
-  position: relative;
-  overflow: hidden;
-}
 .mt-small { margin-top: 0.5rem; }
 .mt-med { margin-top: 1rem; }
