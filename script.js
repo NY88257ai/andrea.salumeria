@@ -14,7 +14,7 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-/* ========= HERO FADE ROTATOR ========= */
+/* ========= HERO FADE ROTATOR – Ken Burns ========= */
 const heroImages = [
   "photos/hero/hero1.jpg",
   "photos/hero/hero2.jpg",
@@ -26,25 +26,68 @@ const heroImages = [
   "photos/hero/wassup.jpg"
 ];
 
-const heroEl = document.querySelector(".hero");
+// Preload all images first
+heroImages.forEach(src => { const i = new Image(); i.src = src; });
+
+const heroVisualWrapper = document.querySelector(".hero-visual-wrapper");
 let heroIndex = 0;
 
-function rotateHero() {
-  if (!heroEl) return;
+const kenBurnsVariants = [
+  { transformStart: "scale(1.08) translate(-2%, -2%)", transformEnd: "scale(1.0) translate(2%, 2%)" },
+  { transformStart: "scale(1.0) translate(2%, 2%)",   transformEnd: "scale(1.08) translate(-2%, -2%)" },
+  { transformStart: "scale(1.06) translate(0%, -3%)", transformEnd: "scale(1.0) translate(0%, 3%)" },
+  { transformStart: "scale(1.0) translate(-3%, 0%)",  transformEnd: "scale(1.06) translate(3%, 0%)" },
+];
 
-  heroEl.classList.add("fade");
+function createLayer(src, index) {
+  const wrapper = document.createElement("div");
+  wrapper.style.cssText = `
+    position: absolute; inset: 0; overflow: hidden;
+    opacity: 0; transition: opacity 1.5s ease-in-out;
+  `;
 
-  setTimeout(() => {
-    heroEl.style.backgroundImage = `url('${heroImages[heroIndex]}')`;
-    heroEl.classList.remove("fade");
+  const inner = document.createElement("div");
+  const kb = kenBurnsVariants[index % kenBurnsVariants.length];
+  inner.style.cssText = `
+    position: absolute; inset: -6%;
+    background: url('${src}') center/cover no-repeat;
+    transform: ${kb.transformStart};
+    transition: transform 6s ease-in-out;
+  `;
 
-    heroIndex = (heroIndex + 1) % heroImages.length;
-  }, 800);
+  wrapper.appendChild(inner);
+  return { wrapper, inner, kb };
 }
 
-if (heroEl) {
-  rotateHero();
-  setInterval(rotateHero, 4000);
+if (heroVisualWrapper) {
+  heroVisualWrapper.style.position = "relative";
+
+  function showNext() {
+    const { wrapper, inner, kb } = createLayer(heroImages[heroIndex], heroIndex);
+    heroVisualWrapper.appendChild(wrapper);
+
+    // fade in + start Ken Burns
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      wrapper.style.opacity = "1";
+      inner.style.transform = kb.transformEnd;
+    }));
+
+    // fade out and remove previous layers after transition
+    setTimeout(() => {
+      const layers = heroVisualWrapper.querySelectorAll(":scope > div");
+      layers.forEach((l, i) => {
+        if (i < layers.length - 1) {
+          l.style.opacity = "0";
+          setTimeout(() => l.remove(), 1500);
+        }
+      });
+    }, 1500);
+
+    heroIndex = (heroIndex + 1) % heroImages.length;
+  }
+
+  showNext();
+  setInterval(showNext, 5000);
 }
 
 /* ========= GALLERY CAROUSEL ========= */
