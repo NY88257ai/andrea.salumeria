@@ -761,10 +761,15 @@ section {
 }
 
 .our-story-section {
+  align-items: flex-start !important;
+}
+.our-story-section {
   display: flex;
   align-items: stretch;
 }
-
+.our-story-image {
+  flex: 1 1 auto;
+}
 .our-story-image img {
   height: 100%;
   width: 100%;
