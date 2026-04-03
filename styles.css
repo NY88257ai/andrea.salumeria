@@ -767,6 +767,8 @@ section {
 
 .our-story-image {
   flex: 1 1 auto;
+  min-height: 0; /* critical for flexbox */
+  overflow: visible !important;
 }
 
 .our-story-image img {
