@@ -760,5 +760,16 @@ section {
   padding: calc(var(--space-block) * 0.35) 0;
 }
 
+.our-story-section {
+  display: flex;
+  align-items: stretch;
+}
+
+.our-story-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .mt-small { margin-top: 0.5rem; }
 .mt-med { margin-top: 1rem; }
