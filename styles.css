@@ -761,19 +761,19 @@ section {
 }
 
 .our-story-section {
-  align-items: flex-start !important;
-}
-.our-story-section {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
 }
+
 .our-story-image {
   flex: 1 1 auto;
 }
+
 .our-story-image img {
-  height: 100%;
   width: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .mt-small { margin-top: 0.5rem; }
