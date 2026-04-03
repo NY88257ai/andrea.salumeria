@@ -542,7 +542,7 @@ header {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: 2.5rem;
-  align-items: stretch;
+  align-items: start; /* was stretch — this caused height forcing */
 }
 
 .about-accent {
@@ -570,20 +570,21 @@ header {
   border: 1px dashed rgba(0,0,0,0.09);
 }
 
+/* FIXED: no more overflow hidden, no forced height, no flex */
 .about-card--photo {
   padding: 0;
-  overflow: hidden;
-  min-height: 280px;
-  display: flex;
+  overflow: visible;
+  min-height: auto;
+  display: block;
 }
 
+/* FIXED: image now displays fully without cropping */
 .about-photo {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;          /* was 100% */
+  object-fit: contain;   /* was cover */
   display: block;
   border-radius: var(--radius-card);
-  flex: 1;
 }
 
 .about-meta {
