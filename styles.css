@@ -789,3 +789,9 @@ footer {
     height: 28px;
   }
 }
+
+@media (max-width: 600px) {
+  .assurance-badge {
+    display: none !important;
+  }
+}
