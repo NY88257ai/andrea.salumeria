@@ -734,15 +734,34 @@ footer {
   gap: 0.5rem;
 }
 
+/* Make footer-meta a row with space between */
 .footer-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .footer-meta span {
   opacity: 0.8;
 }
+
+/* Badge container — prevents it from stretching the footer */
+.assurance-badge {
+  display: flex;
+  align-items: center;
+  max-height: 32px; /* keeps footer height stable */
+  overflow: hidden;
+}
+
+/* Scale the injected iframe so it fits neatly */
+.assurance-badge iframe {
+  transform: scale(0.75);
+  transform-origin: right center;
+  height: 32px;
+}
+
 
 :root {
   --space-section: 2.5rem;
