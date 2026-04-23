@@ -800,3 +800,25 @@ section {
 
 .mt-small { margin-top: 0.5rem; }
 .mt-med { margin-top: 1rem; }
+
+/* Mobile fix: scale badge down and prevent overflow */
+@media (max-width: 600px) {
+  .footer-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .assurance-badge {
+    max-height: 28px;
+    overflow: hidden;
+    align-self: flex-end; /* keeps it right-aligned but not overflowing */
+  }
+
+  .assurance-badge iframe {
+    transform: scale(0.5);
+    transform-origin: right center;
+    height: 28px;
+  }
+}
+
